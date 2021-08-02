@@ -1,0 +1,49 @@
+@import "colors";
+
+.container {
+width: 90%;
+  margin:0 auto;
+}
+
+.loginContainer {
+  display: flex;
+  justify-content: flex-end;
+
+  .navLogin {
+    color: $color-lightGray;
+    margin-right: 2rem;
+    cursor: pointer;
+    text-decoration: none;
+  }
+}
+
+
+.HeaderContainer {
+  display: flex;
+  justify-content: space-between;
+  .HeaderNav{
+    nav{
+      display: flex;
+      justify-content: space-between;
+      a{
+
+      }
+    }
+  }
+
+  .HeaderLeftSideContainer {
+    transform: translateX(-43%);
+    width: 100%;
+
+  }
+  .HeaderRightSideContainer {
+width:100%;
+  }
+
+
+  .headerBackground {
+    width: 100%;
+    height: 100%;
+  }
+}
+
