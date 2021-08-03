@@ -1,45 +1,69 @@
 @import "colors";
-
+@import "fonts";
 .container {
-width: 90%;
-  margin:0 auto;
+  width: 90%;
+  margin: 0 auto;
+font-family: $font-base normal;
 }
 
 .loginContainer {
+  margin-top:37px;
   display: flex;
   justify-content: flex-end;
+  margin-bottom:26px;
+
 
   .navLogin {
     color: $color-lightGray;
     margin-right: 2rem;
     cursor: pointer;
     text-decoration: none;
+    padding:9px 10px;
+
+    &:last-of-type{
+      border: 0.75px solid $color-yellow;
+      text-align: center;
+    }
   }
 }
+.HeaderWrap{
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+.HeaderNav {
+  width:50%;
 
+  nav {
+    display: flex;
+    justify-content: space-between;
+
+    a {
+      color: $color-darkGray;
+      &:first-of-type {
+        padding: 9px 20px;
+      }
+    }
+    .FirstHomeLinkStyle{
+      border: 0.75px solid $color-darkGray;
+    }
+  }
+}
 
 .HeaderContainer {
   display: flex;
   justify-content: space-between;
-  .HeaderNav{
-    nav{
-      display: flex;
-      justify-content: space-between;
-      a{
 
-      }
-    }
-  }
 
   .HeaderLeftSideContainer {
     transform: translateX(-43%);
     width: 100%;
 
   }
-  .HeaderRightSideContainer {
-width:100%;
-  }
 
+  .HeaderRightSideContainer {
+    width: 100%;
+  }
 
   .headerBackground {
     width: 100%;
@@ -47,3 +71,62 @@ width:100%;
   }
 }
 
+.underNavContainer {
+  text-align: center;
+
+  h1 {
+    color: $color-darkGray;
+    font-size: 38px;
+    text-align: center;
+    margin-bottom:0;
+  }
+
+  .RightSideLinks {
+    display: flex;
+    justify-content: space-around;
+
+    .RightSideLink {
+      text-decoration: none;
+      color: $color-darkGray;
+      text-transform: uppercase;
+      border: 0.75px solid $color-darkGray;
+      padding: 13px 93px;
+
+      &:last-of-type {
+        padding: 13px 52px;
+      }
+
+      a {
+        font-size: 32px;
+      }
+    }
+  }
+}
+
+.threeColumnsContainer {
+  display: flex;
+  background: $color-yellow;
+  justify-content: space-around;
+
+  .columnContainer {
+    width: 21%;
+    padding-bottom:86px;
+    text-align: center;
+    h1 {
+      margin-top:46px;
+      margin-bottom:0;
+   color:$color-darkGray;
+      font-size: 90px;
+      font-weight:300;
+    }
+    p{
+      font-size:18px;
+      color:$color-darkGray;
+      margin-bottom:28px;
+    }
+    span{
+      font-size:16px;
+      color:$color-darkGray;
+    }
+  }
+}

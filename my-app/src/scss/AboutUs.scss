@@ -1,0 +1,44 @@
+@import "colors";
+@import "fonts";
+
+.AboutUsContainer {
+  width: 100%;
+  display: flex;
+  font-family: $font-base;
+
+  .AboutUsLeftSide {
+    width: 50%;
+    background-color: $color-lightestGray;
+
+    h1 {
+      text-align: center;
+      color: $color-darkGray;
+      font-size: 38px;
+      font-weight:normal;
+      margin-top:180px;
+    }
+
+    .AboutUsLeftSideDecoration {
+      margin: 0 auto;
+      display: flex;
+      justify-content: center
+    }
+    p {
+      width: 50%;
+      margin: 0 auto;
+      margin-top: 61px;
+      text-align: center;
+      font-size: 30px;
+    }
+    .AboutUsLeftSideSignature{
+      display: flex;
+      justify-content:flex-end;
+     margin-top:40px;
+      margin-right:150px;
+    }
+  }
+
+  .AboutUsRightSide {
+    width: 50%;
+  }
+}

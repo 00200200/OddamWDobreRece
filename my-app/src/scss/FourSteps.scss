@@ -1,0 +1,60 @@
+@import "fonts";
+@import "colors";
+.FourStepsContainer {
+  font-family:$font-base;
+  width:100%;
+margin:0 auto;
+  font-family: $font-base;
+  .ImgContainer {
+  text-align:center;
+    margin:0 auto;
+    h1 {
+      font-size: 38px;
+      color: $color-darkGray
+    }
+  }
+  .FourStepsWrapper{
+    display: flex;
+    justify-content:space-around;
+    background-color:$color-lightestGray;
+    width:60%;
+    padding:3rem;
+    margin:0 auto;
+  .OneStepContainer {
+    width: 15%;
+    text-align: center;
+    h1{
+      font-size:18px;
+      color:$color-darkGray;
+
+    }
+    .StepLine{
+      width: 70px;
+      border: 1px solid #707070;
+      margin:0 auto;
+
+    }
+    p{
+      font-size:16px;
+      color:$color-darkGray;
+    }
+  }
+  }
+}
+.FourStepsBackground{
+  background-color:$color-lightestGray;
+}
+
+
+.UnderFourStepsButton{
+  display:flex;
+  justify-content:center;
+  margin:2rem;
+  .RightSideLink{
+    text-decoration: none;
+    color:$color-darkGray;
+    font-size:36px;
+    padding:13px 93px;
+    border:0.75px solid $color-darkGray;
+  }
+}

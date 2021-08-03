@@ -1,0 +1,30 @@
+@import "fonts";
+@import "colors";
+.logOutContainer{
+
+  margin:0 auto;
+  text-align:center;
+  color:$color-darkGray;
+  margin-top:8rem;
+  h1{
+    font-size:40px;
+    font-weight:normal;
+    font-family:$font-base;
+  }
+}
+.logOutBtnContainer{
+width:100%;
+  display:flex;
+  justify-content:center;
+  margin-top:3rem;
+}
+.logOutBtn{
+  color: $color-lightGray;
+  cursor: pointer;
+  text-decoration: none;
+  padding: 9px 10px;
+  border: 0.75px solid $color-darkGray;
+  text-align: center;
+margin:0 auto;
+}
+

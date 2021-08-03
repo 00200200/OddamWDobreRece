@@ -1,0 +1,23 @@
+@import "fonts";
+@import "colors";
+.FooterContainer {
+  width:100%;
+  .FooterWrapper {
+    display: flex;
+    width:90%;
+    margin-bottom:11px;
+    margin-top:1rem;
+    p{
+      font-size:18px;
+      font-family: $font-base;
+      color:$color-darkGray;
+      margin:0 auto;
+      text-align:center;
+      transform:translateX(80px);
+      font-weight: normal;
+    }
+    img{
+      margin-right:1rem;
+    }
+  }
+}

@@ -1,5 +1,12 @@
 @import "fonts";
 @import "colors";
+@import "FourSteps.scss";
+@import "AboutUs.scss";
+@import "Organisations.scss";
+@import "Contact.scss";
+@import "Footer.scss";
+@import "SignIn.scss";
+@import "LogOut.scss";
 body{
   font-family: $font-base;
 }

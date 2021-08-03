@@ -1,0 +1,74 @@
+@import "fonts";
+@import "colors";
+
+
+.registerContainer {
+  width: 100%;
+  margin-top:5.5rem;
+
+  .registerHeader {
+    text-align: center;
+
+    h1 {
+      font-family: $font-base;
+      font-weight: normal;
+      font-size: 40px;
+      color: $color-darkGray;
+      text-align: center;
+      margin: 0 auto;
+      margin-bottom:2rem;
+    }
+
+  }
+
+  .RegisterForm {
+    margin-top:2rem;
+    display: flex;
+    div{
+      padding:30px 70px;
+      margin:0 auto;
+      background-color:$color-white;
+    }
+    input{
+      border:none;
+      background-color:$color-white;
+      border-bottom:0.75px solid $color-darkGray;
+    }
+    p{
+    font-size:16px;
+      color:$color-darkGray;
+      font-weight:600;
+    }
+
+  }
+}
+
+
+.registerBtn {
+  margin-top: 37px;
+  display: flex;
+  justify-content:center;
+  margin-bottom: 26px;
+  .navLogin {
+    color: $color-lightGray;
+    margin-right: 2rem;
+    cursor: pointer;
+    text-decoration: none;
+    padding: 9px 10px;
+
+    //&:last-of-type {
+    //  border: 0.75px solid $color-darkGray;
+    //  text-align: center;
+    //  margin-left:12rem;
+    //}
+  }
+}
+
+input[type=submit]{
+  background:none;
+  border:none;
+  cursor:pointer;
+  color:$color-darkGray;
+    border: 0.75px solid $color-darkGray;
+   margin-left:8rem;
+}
