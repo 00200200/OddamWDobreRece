@@ -13,12 +13,12 @@ const HomeHeader = () => {
             <div className="HeaderWrap">
     <div className="HeaderNav">
         <nav>
-            <Link to="/"><a className="FirstHomeLinkStyle">Start</a></Link>
-            <HashLink smooth to="/#FourSteps" scroll={(el) => el.scrollIntoView({behavior: 'auto', block: 'end'})}><a>O
+            <Link  style={{padding:"9px 10px", textDecoration:"none"}}to="/"><a className="FirstHomeLinkStyle">Start</a></Link>
+            <HashLink  style={{padding:"9px 10px", textDecoration:"none"}}smooth to="/#FourSteps" scroll={(el) => el.scrollIntoView({behavior: 'auto', block: 'end'})}><a>O
                 co chodzi?</a></HashLink>
-            <HashLink smooth to="/#AboutUs"><a> O nas</a></HashLink>
-            <HashLink smooth to="/#Organistations"> <a>Fundacja i organizacje</a></HashLink>
-            <HashLink smooth to="/#contact"><a>Kontakt</a></HashLink>
+            <HashLink style={{padding:"9px 10px", textDecoration:"none"}} smooth to="/#AboutUs"><a> O nas</a></HashLink>
+            <HashLink style={{padding:"9px 10px", textDecoration:"none"}} smooth to="/#Organistations"> <a>Fundacja i organizacje</a></HashLink>
+            <HashLink  style={{padding:"9px 10px", textDecoration:"none"}}smooth to="/#contact"><a>Kontakt</a></HashLink>
         </nav>
     </div>
                 </div>

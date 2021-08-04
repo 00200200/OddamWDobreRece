@@ -37,6 +37,7 @@ const Home = () => {
             <Organistations></Organistations>
             <Contact></Contact>
             <Footer></Footer>
+
 </>
 );
 };
