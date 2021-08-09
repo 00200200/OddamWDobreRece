@@ -11,10 +11,12 @@
     margin-right: 2rem;
 
     .contactLeftSideBackground {
-      width: 100%;
+      width: 150%;
       height: 100%;
-      max-width: 100%;
-      opacity: 0.5;
+      z-index:0;
+
+
+      opacity: 0.2;
     }
   }
 
@@ -23,7 +25,7 @@
     width: 40%;
     margin: 0 auto;
     text-align: center;
-
+margin-top:10rem;
     h1 {
       font-size: 38px;
       text-align: center;
@@ -53,15 +55,19 @@
   text-align:left;
   display: flex;
   flex-direction:column;
+  margin:5px;
+  width:auto;
+  height:auto;
   p{
     font-size: 16px;
     text-align: left;
     font-weight:600;
   }
-  input[type=textarea]{
+  textarea{
     border:none;
-    height: 97px;
-    width: 528px;
+    height:97px;
+
+    min-length:3;
     border-bottom:0.75px solid $color-darkGray;
   }
   }

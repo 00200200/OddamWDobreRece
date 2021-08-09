@@ -5,9 +5,9 @@ import FourSteps from "./FourSteps";
 import {HashLink} from "react-router-hash-link";
 import AboutUs from "./AboutUS";
 import HomeHeader from "./HomeHeader";
-import Organistations from "./Organistations";
 import Contact from "./Contact";
 import Footer from "./Footer";
+import WhoWeHelp from "./WhoWeHelp";
 
 const Home = () => {
     return (
@@ -34,7 +34,7 @@ const Home = () => {
     <HomeThreeColumns></HomeThreeColumns>
             <FourSteps></FourSteps>
             <AboutUs></AboutUs>
-            <Organistations></Organistations>
+            <WhoWeHelp></WhoWeHelp>
             <Contact></Contact>
             <Footer></Footer>
 

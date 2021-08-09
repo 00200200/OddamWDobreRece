@@ -66,10 +66,9 @@ font-family: $font-base normal;
 
   .headerBackground {
     z-index:-55;
-    position:absolute;
     transform: translateX(-40%);
+    width:150%;
     margin-top:-10rem;
-    width:70%;
     hegiht:auto;
   }
 }

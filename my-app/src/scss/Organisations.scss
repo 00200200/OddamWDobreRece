@@ -73,6 +73,13 @@ width:100%;
   width:10%;
   margin:0 auto;
   margin-top:75px;
+  ul{
+    list-style-type: none;
+    display: flex;
+li{
+  margin:1rem;
+}
+  }
   a{
     font-size:18px;
     color:$color-darkGray;

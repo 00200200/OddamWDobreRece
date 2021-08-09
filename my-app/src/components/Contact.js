@@ -1,11 +1,18 @@
-import React from 'react';
+import React, {useState} from 'react';
 
 const Contact = () => {
+    const [form,setForm] = useState({
+        name:"",
+        email:"",
+        textMessage:"",
+    })
+
+
     return (
         <div className="contactContainer" id="contact">
 
             <div className="contactLeftSide">
-                <img className="contactLeftSideBackground" src={require("../assets/Background Image.png").default}/>
+                {/*<img className="contactLeftSideBackground" src={require("../assets/BackgroundImage.png").default}/>*/}
             </div>
             <div className="contactRightSide">
                 <h1>Skontaktuj się z nami</h1>
@@ -23,7 +30,7 @@ const Contact = () => {
                     </div>
                 <div className="contactTextForm">
                     <p>Wpisz swoją wiadomość</p>
-                    <input type="textarea"/>
+                    <textarea/>
                 </div>
 <div className="SubmitButtonContact">
                        <input type="submit"></input>
