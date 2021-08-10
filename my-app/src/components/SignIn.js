@@ -42,13 +42,11 @@ const SignIn = () => {
      e.preventDefault()
         if (!email) {
             // setEmailError("E-mail jest wymagany")
-
             setFormErrors({...formErrors, emailError: "E-mail jest wymagany"})
-
         } else if (!/^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i.test(email)) {
-            setEmailError("E-Mail jest nieprawidłowy")
+            setFormErrors({...formErrors, emailError: "E-mail jest nieprawidłowy"})
 
-        } else (setEmailError(null))
+        } else setFormErrors({...formErrors,emailError:""})
         if (!password) {
             setPasswordError("Hasło jest wymagane")
 
@@ -67,9 +65,8 @@ const SignIn = () => {
             setPasswordError( "Hasla nie są identyczne") && setPasswordRepError("Hasła nie są identyczne");
         }
 
-        setFormErrors({});
+        // setFormErrors({});
 
-        e.submit();
     }
 
 
