@@ -24,12 +24,36 @@ const Contact = () => {
             },
             body: JSON.stringify(form),
         }).then((response) => {
-           console.log(response.status)
-           console.log(response.ok)
+            console.log(response.status)
+            console.log(response.ok)
 
         })
     }
+    const Validation = () => {
 
+        if (!form.email) {
+            setErrors({...errors, emailError: "E-mail jest wymagany"})
+
+        } else if (!/^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i.test(form.email)) {
+            setErrors({...errors, emailError: "E-Mail jest nieprawidłowy"})
+        } else {
+            setErrors({...errors, emailError: ""})
+        }
+        if (!form.name) {
+            setErrors({...errors, nameError: "Nazwa jest wymagana"})
+        } else if ((/\s/.test(form.name))) {
+            setErrors({...errors, nameError: "Nazwa musi być jednym wyrazem"})
+        } else {
+            setErrors({...errors, nameError: ""})
+        }
+        if (!form.textMessage){
+            setErrors({...errors,textMessageError: "Wiadomość jest wymagana"})
+        } else if (form.textMessage.length <120){
+            setErrors({...errors,textMessageError: "Wiadomość jest za krótka"})
+        }else {
+            setErrors({...errors,textMessageError: ""})
+        }
+    }
     let regexp = /[a-zA-Z]+\s+[a-zA-Z]+/g;
 
     const handleSubmit = (e) => {
@@ -37,51 +61,10 @@ const Contact = () => {
         sendData();
         console.log(form, errors)
 
-
-        let errorsTmp = {
-            nameError: "",
-            emailError: "",
-            textMessageError: ""
-        };
-
-        if (!form.email) {
-            console.log("email pusty")
-            // errorsTmp.emailError: "E-mail jest wymagany"
-
-            // setErrors({...errors, emailError: "E-mail jest wymagany"})
-        }
-
-        if (!/^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i.test(form.email)) {
-
-            setErrors({...errors, emailError: "E-Mail jest nieprawidłowy"})
-        } else {
-            setErrors({...errors, emailError: ""})
-        }
-
-        if (!form.textMessage) {
-            console.log('text message');
-            setErrors({...errors, textMessageError: "Wiadomość nie może być pusta"})
-        }
-
-        if (form.textMessage.length < 120) {
-            console.log('text message 2');
-
-            setErrors({...errors, textMessageError: "Wiadomość musi posiadać minimum 120 znaków"})
-        } else {
-            setErrors({...errors, textMessageError: ""})
-        }
-        if (!form.name) {
-            console.log('text name');
-
-            setErrors({...errors, nameError: "nazwa nie może być pusta"})
-        }
-
-        if (regexp.test(form.name)) {
-            setErrors({...errors, nameError: "Nazwa musi być jednym wyrazem"})
-        } else setErrors({...errors, nameError: ""})
+        Validation();
 
 
-        setErrors(errorsTmp);
+
     }
 
     const updateField = e => {
