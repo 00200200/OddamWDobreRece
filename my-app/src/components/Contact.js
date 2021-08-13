@@ -4,57 +4,68 @@ const Contact = () => {
     const [form, setForm] = useState({
         name: "",
         email: "",
-        textMessage: "",
+        message: "",
     })
     const [errors, setErrors] = useState({
         nameError: "",
         emailError: "",
         textMessageError: ""
     })
+    const [submitTextMessage, setSubmitTextMessage] = useState("")
 
 
     const API = `https://fer-api.coderslab.pl/v1/portfolio/contact`
 
 
     const sendData = () => {
+        console.log('test1',JSON.stringify(form))
+
         fetch(API, {
             method: "POST",
-            header: {
+            headers: {
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify(form),
         }).then((response) => {
             console.log(response.status)
             console.log(response.ok)
+            if (response.ok === true){
+                setSubmitTextMessage(`Wiadomość zostałą wysłana! Wkrótce się skontaktujemy`)
+                console.log("Formularzy wysłany")
+            }else {console.log("Błąd Formularz nie został wysłany")}
 
         })
     }
     const Validation = () => {
-
+        const ValidateErrors = {
+            emailError:"",
+            nameError:"",
+            textMessageError:"",
+        }
         if (!form.email) {
-            setErrors({...errors, emailError: "E-mail jest wymagany"})
+            ValidateErrors.emailError = "E-Mail Jest wymagany"
 
         } else if (!/^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i.test(form.email)) {
-            setErrors({...errors, emailError: "E-Mail jest nieprawidłowy"})
+            ValidateErrors.emailError = "E-mail jest nieprawidłowy"
         } else {
-            setErrors({...errors, emailError: ""})
+           ValidateErrors.emailError = ""
         }
         if (!form.name) {
-            setErrors({...errors, nameError: "Nazwa jest wymagana"})
+            ValidateErrors.nameError = "Nazwa jest wymagana"
         } else if ((/\s/.test(form.name))) {
-            setErrors({...errors, nameError: "Nazwa musi być jednym wyrazem"})
+            ValidateErrors.nameError = "Nazwa musi być jednym wyrazem"
         } else {
-            setErrors({...errors, nameError: ""})
+            ValidateErrors.nameError = ""
         }
-        if (!form.textMessage){
-            setErrors({...errors,textMessageError: "Wiadomość jest wymagana"})
-        } else if (form.textMessage.length <120){
-            setErrors({...errors,textMessageError: "Wiadomość jest za krótka"})
+        if (!form.message){
+            ValidateErrors.textMessageError = "Wiadomość jest wymagana"
+        } else if (form.message.length <120){
+            ValidateErrors.textMessageError =  "Wiadomość jest za krótka"
         }else {
-            setErrors({...errors,textMessageError: ""})
+            ValidateErrors.textMessageError = ""
         }
+        setErrors(ValidateErrors)
     }
-    let regexp = /[a-zA-Z]+\s+[a-zA-Z]+/g;
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -83,6 +94,7 @@ const Contact = () => {
             <div className="contactRightSide">
                 <h1>Skontaktuj się z nami</h1>
                 <img src={require("../assets//Decoration.svg").default}/>
+                <h1 style={{color:"green" ,width:"10%"}}>{submitTextMessage}</h1>
                 <form>
                     <div className="contactForm">
                         <div className="contactFormLeftSide">
@@ -99,7 +111,7 @@ const Contact = () => {
                     <div className="contactTextForm">
                         <p>Wpisz swoją wiadomość</p>
                         <p style={{color: "red", fontSize: "10px"}}>{errors.textMessageError}</p>
-                        <textarea name="textMessage" onChange={updateField}/>
+                        <textarea name="message" onChange={updateField}/>
                     </div>
                     <div className="SubmitButtonContact">
                         <input onClick={handleSubmit} type="submit"></input>
@@ -111,3 +123,27 @@ const Contact = () => {
 }
 
 export default Contact;
+
+
+// if (!form.email) {
+//     setErrors({...errors, emailError: "E-mail jest wymagany"})
+//
+// } else if (!/^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i.test(form.email)) {
+//     setErrors({...errors, emailError: "E-Mail jest nieprawidłowy"})
+// } else {
+//     setErrors({...errors, emailError: ""})
+// }
+// if (!form.name) {
+//     setErrors({...errors, nameError: "Nazwa jest wymagana"})
+// } else if ((/\s/.test(form.name))) {
+//     setErrors({...errors, nameError: "Nazwa musi być jednym wyrazem"})
+// } else {
+//     setErrors({...errors, nameError: ""})
+// }
+// if (!form.textMessage){
+//     setErrors({...errors,textMessageError: "Wiadomość jest wymagana"})
+// } else if (form.textMessage.length <120){
+//     setErrors({...errors,textMessageError: "Wiadomość jest za krótka"})
+// }else {
+//     setErrors({...errors,textMessageError: ""})
+// }
