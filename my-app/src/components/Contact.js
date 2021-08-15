@@ -93,8 +93,9 @@ const Contact = () => {
             </div>
             <div className="contactRightSide">
                 <h1>Skontaktuj się z nami</h1>
+                <p style={{color:"green" ,width:"100%"}}>{submitTextMessage}</p>
+
                 <img src={require("../assets//Decoration.svg").default}/>
-                <h1 style={{color:"green" ,width:"10%"}}>{submitTextMessage}</h1>
                 <form>
                     <div className="contactForm">
                         <div className="contactFormLeftSide">
