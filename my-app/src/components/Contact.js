@@ -89,12 +89,11 @@ const Contact = () => {
         <div className="contactContainer" id="contact">
 
             <div className="contactLeftSide">
-                {/*<img className="contactLeftSideBackground" src={require("../assets/BackgroundImage.png").default}/>*/}
+                <img className="contactLeftSideBackground" src={require("../assets/BackgroundImage.png").default}/>
             </div>
             <div className="contactRightSide">
                 <h1>Skontaktuj się z nami</h1>
                 <p style={{color:"green" ,width:"100%"}}>{submitTextMessage}</p>
-
                 <img src={require("../assets//Decoration.svg").default}/>
                 <form>
                     <div className="contactForm">

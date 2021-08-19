@@ -13,9 +13,7 @@
     .contactLeftSideBackground {
       width: 150%;
       height: 100%;
-      z-index:0;
-
-
+      z-index: 0;
       opacity: 0.2;
     }
   }
@@ -25,7 +23,8 @@
     width: 40%;
     margin: 0 auto;
     text-align: center;
-margin-top:10rem;
+    margin-top: 10rem;
+
     h1 {
       font-size: 38px;
       text-align: center;
@@ -36,45 +35,52 @@ margin-top:10rem;
       display: flex;
       flex-direction: row;
 
-      input{
-        border:none;
-        border-bottom:0.75px solid $color-darkGray;
+      input {
+        border: none;
+        border-bottom: 0.75px solid $color-darkGray;
       }
+
       p {
         font-size: 16px;
         text-align: left;
-        font-weight:600;
+        font-weight: 600;
       }
+
       .contactFormLeftSide {
         margin-right: 2rem;
       }
     }
   }
 }
-.contactTextForm{
-  text-align:left;
+
+.contactTextForm {
+  text-align: left;
   display: flex;
-  flex-direction:column;
-  margin:5px;
-  width:auto;
-  height:auto;
-  p{
+  flex-direction: column;
+  margin: 5px;
+  width: auto;
+  height: auto;
+
+  p {
     font-size: 16px;
     text-align: left;
-    font-weight:600;
+    font-weight: 600;
   }
-  textarea{
-    border:none;
-    height:97px;
 
-    min-length:3;
-    border-bottom:0.75px solid $color-darkGray;
+  textarea {
+    border: none;
+    height: 97px;
+
+    min-length: 3;
+    border-bottom: 0.75px solid $color-darkGray;
   }
-  }
+}
+
 .SubmitButtonContact {
   display: flex;
   justify-content: flex-end;
-  margin-top:3rem;
+  margin-top: 3rem;
+
   input[type=submit] {
     font-size: 18px;
     font-weight: 300;
