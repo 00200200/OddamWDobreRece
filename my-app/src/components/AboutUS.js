@@ -12,7 +12,7 @@ const AboutUs = () => {
                 </div>
             </div>
             <div className="AboutUsRightSide">
-                <img src={require("../assets/People.png").default}/>
+                <img style={{width:"50vw"}}src={require("../assets/People.png").default}/>
             </div>
         </div>
     );

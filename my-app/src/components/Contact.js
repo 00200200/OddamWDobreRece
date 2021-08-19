@@ -89,7 +89,7 @@ const Contact = () => {
         <div className="contactContainer" id="contact">
 
             <div className="contactLeftSide">
-                <img className="contactLeftSideBackground" src={require("../assets/BackgroundImage.png").default}/>
+                {/*<img className="contactLeftSideBackground" src={require("../assets/BackgroundImage.png").default}/>*/}
             </div>
             <div className="contactRightSide">
                 <h1>Skontaktuj się z nami</h1>
