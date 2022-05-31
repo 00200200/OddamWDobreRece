@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/00200200.github.io/OddamWDobreRece/static/css/main.5c182d4f.chunk.css",
+    "main.js": "/00200200.github.io/OddamWDobreRece/static/js/main.84ed9db7.chunk.js",
+    "main.js.map": "/00200200.github.io/OddamWDobreRece/static/js/main.84ed9db7.chunk.js.map",
+    "runtime-main.js": "/00200200.github.io/OddamWDobreRece/static/js/runtime-main.02b30e3d.js",
+    "runtime-main.js.map": "/00200200.github.io/OddamWDobreRece/static/js/runtime-main.02b30e3d.js.map",
+    "static/js/2.29ec7506.chunk.js": "/00200200.github.io/OddamWDobreRece/static/js/2.29ec7506.chunk.js",
+    "static/js/2.29ec7506.chunk.js.map": "/00200200.github.io/OddamWDobreRece/static/js/2.29ec7506.chunk.js.map",
+    "static/js/3.1d74c837.chunk.js": "/00200200.github.io/OddamWDobreRece/static/js/3.1d74c837.chunk.js",
+    "static/js/3.1d74c837.chunk.js.map": "/00200200.github.io/OddamWDobreRece/static/js/3.1d74c837.chunk.js.map",
+    "index.html": "/00200200.github.io/OddamWDobreRece/index.html",
+    "static/css/main.5c182d4f.chunk.css.map": "/00200200.github.io/OddamWDobreRece/static/css/main.5c182d4f.chunk.css.map",
+    "static/js/2.29ec7506.chunk.js.LICENSE.txt": "/00200200.github.io/OddamWDobreRece/static/js/2.29ec7506.chunk.js.LICENSE.txt",
+    "static/media/Decoration.svg": "/00200200.github.io/OddamWDobreRece/static/media/Decoration.1172adb4.svg",
+    "static/media/Hero Image.png": "/00200200.github.io/OddamWDobreRece/static/media/Hero Image.1bee5467.png",
+    "static/media/People.png": "/00200200.github.io/OddamWDobreRece/static/media/People.f5eee084.png",
+    "static/media/Signature.svg": "/00200200.github.io/OddamWDobreRece/static/media/Signature.c2a96569.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.02b30e3d.js",
+    "static/js/2.29ec7506.chunk.js",
+    "static/css/main.5c182d4f.chunk.css",
+    "static/js/main.84ed9db7.chunk.js"
+  ]
+}
